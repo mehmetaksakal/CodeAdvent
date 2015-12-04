@@ -27,12 +27,12 @@ void main(void)
 	{
 		while (getline(inputfile, line))
 		{
-			sscanf_s(line.c_str(), "%dx%dx%d", &l, &w, &h, line.length());
+			sscanf_s(line.c_str(), "%dx%dx%d", &l, &w, &h);
 
 			templength = 2 * l*w + 2 * w*h + 2 * h*l;
 			templength += (unsigned int) fmin(fmin(l*w, w*h), h*l);
 
-			tempribbon = fmin(fmin(2*l+2*w, 2*w+2*h), 2*h+2*l);
+			tempribbon = (unsigned int) fmin(fmin(2*l+2*w, 2*w+2*h), 2*h+2*l);
 			tempribbon += l*w*h;
 
 			totallength += templength;
