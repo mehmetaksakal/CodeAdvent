@@ -46,9 +46,8 @@ void main(void)
 		cout << "Unable to open file";
 	}
 
-
-	printf("Total paper:\t%d\n", totallength);
-	printf("Total ribbon:\t%d\n", totalribbon);
+	cout << "Total paper:\t" << totallength << "\n";
+	cout << "Total ribbon:\t" << totalribbon << "\n";
 
 	return;
 }
